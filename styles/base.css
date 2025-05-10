@@ -57,11 +57,15 @@ main {
 }
 
 .card img {
-    max-width: 100%;
+    max-width: 150px;
+    /* Adjusted image size */
     height: auto;
-    border-radius: 10px;
+    /* Maintain aspect ratio */
+    border-radius: 50%;
+    /* Optional: round image */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
+    /* Space between image and text */
 }
 
 /* Helpful Resources Section */
