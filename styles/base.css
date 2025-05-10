@@ -1,9 +1,9 @@
-/* General body styles */
+/* Base styling */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #ECF0F1;
+    background-color: #ECF0F1;
     color: #34495E;
 }
 
@@ -41,7 +41,7 @@ nav a:hover {
     text-transform: uppercase;
 }
 
-/* Main content layout */
+/* Main layout */
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -51,16 +51,16 @@ main {
     padding: 0 2rem;
 }
 
-/* Card section styles */
-section.card {
-    background: white;
+/* Card styling */
+.card {
+    background-color: white;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-section.card:hover {
+.card:hover {
     transform: translateY(-10px);
 }
 
@@ -87,9 +87,9 @@ section.card:hover {
     transform: scale(1.1);
 }
 
-/* Helpful Resources section */
+/* Helpful resources section */
 .resources {
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -116,9 +116,9 @@ section.card:hover {
     color: #F39C12;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
-    background: #2C3E50;
+    background-color: #2C3E50;
     color: white;
     padding: 2rem;
     text-align: center;
