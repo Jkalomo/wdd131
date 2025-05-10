@@ -4,15 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background: #ECF0F1;
-    /* Soft light background */
     color: #34495E;
-    /* Dark text for readability */
 }
 
 /* Header styles */
 header {
     background: linear-gradient(45deg, #2C3E50, #1ABC9C);
-    /* Gradient background */
     color: white;
     padding: 2rem;
     text-align: center;
@@ -33,7 +30,6 @@ nav {
 
 nav a {
     color: #E67E22;
-    /* Accent color for links */
     text-decoration: none;
     padding: 0.5rem 1rem;
     font-weight: bold;
@@ -43,20 +39,19 @@ nav a {
 nav a:hover {
     color: #F39C12;
     text-transform: uppercase;
-    /* Adds a modern touch */
 }
 
-/* Main content */
+/* Main content layout */
 main {
     max-width: 1200px;
     margin: 2rem auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* 3-column layout */
     gap: 2rem;
     padding: 0 2rem;
 }
 
+/* Card section styles */
 section.card {
     background: white;
     padding: 2rem;
@@ -67,7 +62,6 @@ section.card {
 
 section.card:hover {
     transform: translateY(-10px);
-    /* Card hover effect */
 }
 
 .card img {
@@ -91,10 +85,9 @@ section.card:hover {
 
 .profile-pic:hover {
     transform: scale(1.1);
-    /* Hover effect to make profile pic larger */
 }
 
-/* Section for Helpful Resources */
+/* Helpful Resources section */
 .resources {
     background: #FFFFFF;
     padding: 2rem;
