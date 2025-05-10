@@ -54,18 +54,24 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
+/* Image styles inside .card */
 .card img {
     max-width: 150px;
-    /* Adjusted image size */
     height: auto;
-    /* Maintain aspect ratio */
     border-radius: 50%;
-    /* Optional: round image */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
-    /* Space between image and text */
+    transition: transform 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+/* Hover effect on image */
+.card img:hover {
+    transform: scale(1.2);
+    /* Increase image size by 20% */
 }
 
 /* Helpful Resources Section */
