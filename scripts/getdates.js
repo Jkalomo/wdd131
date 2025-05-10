@@ -1,8 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const currentYear = new Date().getFullYear();
-    document.getElementById("currentyear").textContent = currentYear;
+// Set current year dynamically
+document.getElementById('currentyear').textContent = new Date().getFullYear();
 
-    const lastModified = document.lastModified;
-    document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
-});
+// Set the date of last modification dynamically
+document.getElementById('lastModified').textContent = "Last modified: " + document.lastModified;
+
 
