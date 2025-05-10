@@ -1,24 +1,31 @@
+/* Typography & Base Layout */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #333;
 }
 
+/* Header */
 header {
     background-color: #004080;
-    color: white;
-    padding: 1rem;
+    color: #fff;
     text-align: center;
+    padding: 1rem;
 }
 
+header h1 {
+    margin: 0;
+}
+
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
     flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 nav a {
@@ -26,13 +33,14 @@ nav a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
 nav a:hover {
     background-color: #0066cc;
-    border-radius: 5px;
 }
 
+/* Main Layout */
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -42,32 +50,42 @@ main {
     padding: 0 1rem;
 }
 
+/* Cards */
 .card {
-    background-color: white;
-    padding: 1.5rem;
+    background-color: #ffffff;
+    padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
+/* Images */
+.profile-img,
+.goals-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
     display: block;
     margin: 0 auto 1rem;
-    border-radius: 8px;
-    max-width: 100%;
-    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.profile-image {
-    max-height: 250px;
-}
-
-.goals-image {
-    max-height: 300px;
-}
-
+/* Footer */
 footer {
     background-color: #004080;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Responsive */
+@media (min-width: 700px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
