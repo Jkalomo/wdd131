@@ -1,5 +1,8 @@
-// Set the current year
-document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    document.getElementById("currentyear").textContent = currentYear;
 
-// Set the last modified date
-document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    const lastModified = document.lastModified;
+    document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+});
+

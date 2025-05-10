@@ -1,25 +1,18 @@
-/* Typography & Base Layout */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header */
 header {
     background-color: #004080;
-    color: #fff;
+    color: white;
+    padding: 1.5rem 1rem;
     text-align: center;
-    padding: 1rem;
 }
 
-header h1 {
-    margin: 0;
-}
-
-/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -32,60 +25,85 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
+    transition: background 0.3s ease;
+    border-radius: 4px;
 }
 
 nav a:hover {
     background-color: #0066cc;
 }
 
-/* Main Layout */
 main {
-    max-width: 900px;
+    max-width: 960px;
     margin: 2rem auto;
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0 1rem;
 }
 
-/* Cards */
 .card {
-    background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Images */
-.profile-img,
-.goals-img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+.card img {
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin: 0 auto 1rem;
+    margin: 1rem auto;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    max-height: 300px;
 }
 
-/* Footer */
+.profile-img {
+    border: 3px solid #004080;
+}
+
+.goals-img {
+    border: 3px dashed #0066cc;
+}
+
+.resources {
+    background: linear-gradient(to right, #eef6ff, #dceeff);
+    border-left: 5px solid #004080;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 64, 128, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.resources:hover {
+    transform: translateY(-2px);
+}
+
+.resources h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #004080;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.resources a {
+    color: #003366;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.resources a:hover {
+    color: #0066cc;
+    text-decoration: none;
+}
+
 footer {
     background-color: #004080;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
-}
-
-footer p {
-    margin: 0.3rem 0;
-}
-
-/* Responsive */
-@media (min-width: 700px) {
-    main {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
