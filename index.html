@@ -1,63 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta information for charset and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Meta description and author -->
-    <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals - Your Name - Home page with personal links, scripture, and project resources.">
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Jabulani Kalomo">
     <meta name="author" content="Jabulani Kalomo">
-
-    <!-- Title of the page -->
     <title>WDD 131 – Dynamic Web Fundamentals - Jabulani Kalomo</title>
-
-    <!-- Preconnect to Google Fonts -->
+    
+    <!-- Google Font Preconnect -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <!-- Google Font integration -->
+    <!-- Google Font Link (Roboto Font) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <!-- External CSS file -->
+    
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles/base.css">
-
-    <!-- External JavaScript file -->
-    <script src="scripts/getdates.js" defer></script>
+    
+    <!-- External JS -->
+    <script defer src="scripts/getdates.js"></script>
 </head>
-
 <body>
     <header>
-        <h1>WDD 131 – Dynamic Web Fundamentals</h1>
+        <h1>Welcome to My Personal Website - Jabulani Kalomo</h1>
         <nav>
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/jabulani-kalomo" target="_blank">LinkedIn</a>
             <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scriptures</a>
             <a href="#">Final Project</a>
         </nav>
     </header>
 
     <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <img class="profile-pic" src="images/jabulani.jpg" alt="Your Image" />
-            <p>I am a first-year student in Software Development, with a passion for numbers and technology.</p>
+        <section class="profile">
+            <img class="profile-pic" src="images/jabulani.jpg" alt="Jabulani Kalomo's Profile Picture">
+            <p>Welcome to my personal website! I am Jabulani Kalomo, a first-year student in Software Development. You can learn more about me, my goals, and find helpful resources here.</p>
         </section>
 
         <section class="card">
             <h2>My Goals</h2>
-            <img class="goal-img" src="images/goal.jpeg" alt="Goals Image" />
-            <p>I aim to build my own software development company with a focus on data analytics solutions.</p>
+            <img class="goal-img" src="images/goal.jpeg" alt="Goal Image">
+            <p>My goal is to become an expert in software development, focusing on data analytics and real-time intelligence for business solutions. I aspire to build my own company to enhance business operations through software innovation.</p>
         </section>
 
         <section class="resources">
             <h2>Helpful Resources</h2>
-            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>,
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>, and
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>
-            </p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript Documentation</a></li>
+            </ul>
         </section>
     </main>
 
@@ -66,5 +56,4 @@
         <p id="lastModified"></p>
     </footer>
 </body>
-
 </html>
