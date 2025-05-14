@@ -1,60 +1,102 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #fefefe;
+  color: #111;
 }
-header, footer {
+
+header,
+footer {
   background: #333;
   color: white;
   padding: 1rem;
   text-align: center;
 }
+
 nav {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#menuBtn {
-  display: block;
+
+#menuBtn,
+#modeToggle {
   background: none;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: none;
+  cursor: pointer;
+  margin: 0.25rem;
 }
+
 #navMenu {
   list-style: none;
   padding: 0;
   margin: 0;
   display: none;
 }
+
 #navMenu.show {
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
 }
+
 #navMenu li {
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
 }
+
 #navMenu a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
+
 #navMenu a:hover {
   text-decoration: underline;
+  background-color: #555;
 }
+
 main {
   max-width: 900px;
   margin: auto;
   padding: 1rem;
 }
+
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
+
 figure {
   text-align: center;
+  background-color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background: #222;
+}
+
+.dark-mode figure {
+  background-color: #1a1a1a;
+  border-color: #444;
 }
