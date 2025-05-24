@@ -1,0 +1,133 @@
+/* General Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f5f5f5;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+.navbar {
+  background: #00796b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .hamburger {
+  background: none;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  background: #004d40;
+  border-radius: 5px;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    flex-direction: column;
+    display: none;
+    background: #00796b;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+
+  .navbar .hamburger {
+    display: block;
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hero picture,
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 500px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  margin-top: 0.5rem;
+  color: #004d40;
+}
+
+/* Weather Section */
+.weather {
+  background: #e0f2f1;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.weather h2 {
+  color: #00695c;
+  margin-bottom: 1rem;
+}
+
+.weather-data p {
+  margin-bottom: 0.5rem;
+}
+
+.weather-img {
+  width: 100px;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+/* About Section */
+#about {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #00796b;
+  color: #fff;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather in Madagascar</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/place.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="brand">Madagascar Weather</div>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#weather">Weather</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero">
+    <picture>
+      <source srcset="images/herolarge.jpg" media="(min-width: 1000px)" />
+      <source srcset="images/heromedium.jpg" media="(min-width: 600px)" />
+      <img src="images/madagascar.jpg" alt="Beautiful landscape of Madagascar" />
+    </picture>
+    <h1>Weather in Madagascar</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="weather" id="weather">
+      <h2>Current Weather <span class="weather-icon"></span></h2>
+      <div class="weather-data">
+        <p>Temperature: <span id="temp">25</span>&deg;C</p>
+        <p>Wind Speed: <span id="wind-speed">15</span> km/h</p>
+        <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+      </div>
+      <img src="images/weather.svg" alt="Weather icon" class="weather-img" />
+    </section>
+
+    <section id="about">
+      <h2>About Madagascar</h2>
+      <p>Madagascar is known for its unique biodiversity, diverse landscapes, and vibrant culture. Explore weather
+        patterns and seasonal highlights here.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Madagascar Weather | Last Updated: <span id="last-updated"></span></p>
+  </footer>
+</body>
+
+</html>
