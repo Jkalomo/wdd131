@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A collection of my favorite temples." />
+    <meta name="author" content="Jabulani Kalomo" />
+    <title>Temple Album</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menuBtn" aria-label="Toggle menu">☰</button>
+        <button id="modeToggle" aria-label="Toggle dark mode">🌓</button>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>My Favorite Temples</h2>
+        <div class="gallery"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Temple Album | <span id="lastModified"></span> | Jabulani Kalomo</p>
+    </footer>
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</body>
+
+</html>
