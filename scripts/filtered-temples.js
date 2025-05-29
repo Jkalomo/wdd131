@@ -68,6 +68,28 @@ const temples = [
         dedicated: "2023, October, 22",
         area: 44171,
         imageUrl: "images/bangkok.jpg"
+    },
+    // Additional temples
+    {
+        templeName: "Johannesburg South Africa",
+        location: "Johannesburg, South Africa",
+        dedicated: "1985, August, 24",
+        area: 19384,
+        imageUrl: "images/johannesburg.jpg"
+    },
+    {
+        templeName: "Paris France",
+        location: "Le Chesnay, France",
+        dedicated: "2017, May, 21",
+        area: 44000,
+        imageUrl: "images/paris.jpg"
+    },
+    {
+        templeName: "Tokyo Japan",
+        location: "Tokyo, Japan",
+        dedicated: "1980, October, 27",
+        area: 52920,
+        imageUrl: "images/tokyo.jpg"
     }
 ];
 
@@ -146,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
 });
+  
   
   
   
