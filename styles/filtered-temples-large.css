@@ -10,6 +10,8 @@
     }
 
     nav ul {
+        display: flex;
+        /* ✅ Required for flex utilities like justify-content to apply */
         justify-content: flex-start;
     }
 }

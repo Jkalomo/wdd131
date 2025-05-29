@@ -1,173 +1,127 @@
 const temples = [
     {
-        templeName: "Aba Nigeria",
-        location: "Aba, Nigeria",
-        dedicated: "2005, August, 7",
-        area: 11500,
-        imageUrl: "images/aba-nigeria.jpg"
-    },
-    {
-        templeName: "Manti Utah",
-        location: "Manti, Utah, United States",
-        dedicated: "1888, May, 21",
-        area: 74792,
-        imageUrl: "images/manti-utah.jpg"
-    },
-    {
-        templeName: "Payson Utah",
-        location: "Payson, Utah, United States",
-        dedicated: "2015, June, 7",
-        area: 96630,
-        imageUrl: "images/payson-utah.jpg"
-    },
-    {
-        templeName: "Yigo Guam",
-        location: "Yigo, Guam",
-        dedicated: "2020, May, 2",
-        area: 6861,
-        imageUrl: "images/yigo-guam.jpg"
-    },
-    {
-        templeName: "Washington D.C.",
-        location: "Kensington, Maryland, United States",
-        dedicated: "1974, November, 19",
-        area: 156558,
-        imageUrl: "images/washington-dc.jpg"
-    },
-    {
-        templeName: "Lima Perú",
-        location: "Lima, Perú",
-        dedicated: "1986, January, 10",
-        area: 9600,
-        imageUrl: "images/lima-peru.jpg"
-    },
-    {
-        templeName: "Mexico City Mexico",
-        location: "Mexico City, Mexico",
-        dedicated: "1983, December, 2",
-        area: 116642,
-        imageUrl: "images/mexico-city.jpg"
-    },
-    {
-        templeName: "Durban South Africa",
-        location: "Durban, South Africa",
-        dedicated: "2020, February, 16",
-        area: 19830,
-        imageUrl: "images/durban.jpg"
-    },
-    {
-        templeName: "Salt Lake City Utah",
-        location: "Salt Lake City, Utah, United States",
-        dedicated: "1893, April, 6",
+        templeName: "Salt Lake Temple",
+        location: "Salt Lake City, Utah",
+        dedication: "1893-04-06",
         area: 253015,
-        imageUrl: "images/salt-lake.jpg"
+        imageUrl: "images/salt-lake-temple.jpg"
     },
     {
-        templeName: "Bangkok Thailand",
-        location: "Bangkok, Thailand",
-        dedicated: "2023, October, 22",
-        area: 44171,
-        imageUrl: "images/bangkok.jpg"
-    },
-    // Additional temples
-    {
-        templeName: "Johannesburg South Africa",
-        location: "Johannesburg, South Africa",
-        dedicated: "1985, August, 24",
-        area: 19384,
-        imageUrl: "images/johannesburg.jpg"
+        templeName: "Rome Italy Temple",
+        location: "Rome, Italy",
+        dedication: "2019-03-10",
+        area: 41010,
+        imageUrl: "images/rome-temple.jpg"
     },
     {
-        templeName: "Paris France",
+        templeName: "Paris France Temple",
         location: "Le Chesnay, France",
-        dedicated: "2017, May, 21",
+        dedication: "2017-05-21",
         area: 44000,
-        imageUrl: "images/paris.jpg"
+        imageUrl: "images/paris-temple.jpg"
     },
     {
-        templeName: "Tokyo Japan",
-        location: "Tokyo, Japan",
-        dedicated: "1980, October, 27",
-        area: 52920,
-        imageUrl: "images/tokyo.jpg"
+        templeName: "Provo City Center Temple",
+        location: "Provo, Utah",
+        dedication: "2016-03-20",
+        area: 85000,
+        imageUrl: "images/provo-temple.jpg"
+    },
+    {
+        templeName: "Tegucigalpa Honduras Temple",
+        location: "Tegucigalpa, Honduras",
+        dedication: "2013-03-17",
+        area: 28000,
+        imageUrl: "images/tegucigalpa-temple.jpg"
     }
 ];
 
 const gallery = document.querySelector(".gallery");
 const navLinks = document.querySelectorAll("nav a");
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
-const modeToggle = document.getElementById("modeToggle");
 
-function displayTemples(filteredTemples) {
+// 🧹 Clear gallery
+function clearGallery() {
     gallery.innerHTML = "";
-    filteredTemples.forEach(t => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-
-        card.innerHTML = `
-        <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy" />
-        <div class="card-content">
-          <h3>${t.templeName}</h3>
-          <p><strong>Location:</strong> ${t.location}</p>
-          <p><strong>Dedicated:</strong> ${t.dedicated}</p>
-          <p><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</p>
-        </div>
-      `;
-        gallery.appendChild(card);
-    });
 }
 
-function filterTemples(criteria) {
-    const filter = criteria.toUpperCase();
-    let filtered = temples;
+// 🏗️ Build a card
+function buildCard(temple) {
+    const card = document.createElement("div");
+    card.className = "card";
 
-    switch (filter) {
-        case "OLD":
-            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+    const img = document.createElement("img");
+    img.src = temple.imageUrl;
+    img.alt = temple.templeName;
+
+    const content = document.createElement("div");
+    content.className = "card-content";
+    content.innerHTML = `
+      <h3>${temple.templeName}</h3>
+      <p><strong>Location:</strong> ${temple.location}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedication}</p>
+      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+    `;
+
+    card.appendChild(img);
+    card.appendChild(content);
+    gallery.appendChild(card);
+}
+
+// 🧠 Filter logic
+function filterTemples(filter) {
+    clearGallery();
+    let filtered = [];
+
+    switch (filter.toLowerCase()) {
+        case "old":
+            filtered = temples.filter(t => new Date(t.dedication) < new Date("1900-01-01"));
             break;
-        case "NEW":
-            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+        case "new":
+            filtered = temples.filter(t => new Date(t.dedication) > new Date("2000-01-01"));
             break;
-        case "LARGE":
+        case "large":
             filtered = temples.filter(t => t.area > 90000);
             break;
-        case "SMALL":
+        case "small":
             filtered = temples.filter(t => t.area < 10000);
             break;
         default:
             filtered = temples;
     }
 
-    displayTemples(filtered);
+    filtered.forEach(buildCard);
 }
 
+// 🧭 Event listeners
 navLinks.forEach(link => {
-    link.addEventListener("click", e => {
+    link.addEventListener("click", (e) => {
         e.preventDefault();
-        const label = link.textContent.trim();
-        filterTemples(label);
-        navMenu.classList.remove("open");
+        const filter = link.textContent.trim().toLowerCase();
+        filterTemples(filter);
     });
 });
 
+// 🕓 Footer metadata
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+
+// 🌙 Dark Mode Toggle
+const modeToggle = document.getElementById("modeToggle");
 modeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
-    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
 });
+
+// ☰ Menu Toggle (optional functionality)
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
 
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("open");
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-    }
-    displayTemples(temples);
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-});
+// 🔁 Initial load
+filterTemples("home");
+  
   
   
   
