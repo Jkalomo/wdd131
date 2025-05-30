@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
     <title>Temple Album</title>
-    <link rel="stylesheet" href="styles/temples.css" />
-    <link rel="stylesheet" href="styles/temples-large.css" />
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" />
 </head>
 
 <body>
@@ -25,23 +25,24 @@
         <button id="modeToggle" aria-label="Toggle dark mode">🌓</button>
         <nav>
             <ul id="navMenu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>  
-                <li><a href="#">Small</a></li>
+                <li><a href="#" data-filter="all">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h2>My Favorite Temples</h2>
-        <div class="gallery"></div>
+        <div class="gallery" id="templeGallery">
+            <!-- Temple cards injected by JS -->
+        </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | Temple Album | Jabulani Kalomo | Last Modified: <span
-                id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> | Temple Album | <span id="lastModified"></span> | Jabulani Kalomo</p>
     </footer>
 
     <script src="scripts/filtered-temples.js" defer></script>
