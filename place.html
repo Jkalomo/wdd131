@@ -2,19 +2,17 @@
 <html lang="en-US">
 
 <head>
-  <meta charset="UTF-8" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Weather information and forecast for Madagascar" />
-  <meta name="author" content="Jabulani Kalomo" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Weather information and forecast for Madagascar">
+  <meta name="author" content="Jabulani Kalomo">
   <title>Weather in Madagascar</title>
 
-  <!-- ✅ Correct Google Font Embed -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/place.css" />
+  <link rel="stylesheet" href="styles/place.css">
 
   <!-- JavaScript -->
   <script src="scripts/place.js" defer></script>
@@ -45,13 +43,16 @@
   <!-- Main Content -->
   <main>
     <section class="weather" id="weather">
-      <h2>Current Weather <span class="weather-icon"></span></h2>
+      <h2>Current Weather <span class="weather-icon">🌍</span></h2>
       <div class="weather-data">
         <p>Temperature: <span id="temp">25</span>&deg;C</p>
         <p>Wind Speed: <span id="wind-speed">15</span> km/h</p>
         <p>Wind Chill: <span id="wind-chill">N/A</span></p>
       </div>
-      <img src="images/weather.svg" alt="Weather icon" class="weather-img mobile-only" />
+      <picture>
+        <source srcset="images/weather.svg" media="(max-width: 600px)" />
+        <img src="images/weather.png" alt="Weather icon" class="weather-img" />
+      </picture>
     </section>
 
     <section id="about">
