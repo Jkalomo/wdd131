@@ -3,16 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="Current weather conditions and forecasts for Madagascar's major regions">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official weather forecasts and climate information for Madagascar">
   <meta name="author" content="Jabulani Kalomo - WDD 230 Weather Project">
-  <title>Madagascar Weather Forecast | Current Conditions</title>
+  <title>Madagascar Weather Forecast | Real-Time Climate Data</title>
 
-  <!-- Preconnect for Google Fonts -->
+  <!-- Google Fonts (Validated) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -23,45 +21,49 @@
 </head>
 
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="brand">Madagascar Weather</div>
-    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <button class="hamburger" aria-expanded="false" aria-label="Menu">&#9776;</button>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="#weather">Weather</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#weather">Forecast</a></li>
+      <li><a href="#about">Climate</a></li>
     </ul>
   </nav>
 
+  <!-- Header -->
   <header class="hero">
     <picture>
       <source srcset="images/herolarge.webp" media="(min-width: 1000px)">
       <source srcset="images/heromedium.webp" media="(min-width: 600px)">
-      <img src="images/madagascar.jpg" alt="Landscape of Madagascar showing mountains and rainforest">
+      <img src="images/madagascar.jpg" alt="Panoramic view of Madagascar's landscapes" loading="lazy">
     </picture>
-    <h1>Current Madagascar Weather Conditions</h1>
+    <h1>Madagascar Weather Conditions</h1>
   </header>
 
+  <!-- Main Content -->
   <main>
     <section class="weather" id="weather">
-      <h2>Today's Forecast</h2>
+      <h2>Current Weather</h2>
       <div class="weather-data">
         <p>Temperature: <span id="temp">25</span>&deg;C</p>
         <p>Wind Speed: <span id="wind-speed">15</span> km/h</p>
         <p>Wind Chill: <span id="wind-chill">N/A</span></p>
       </div>
-      <img src="images/weather.svg" alt="Weather icon showing partly cloudy" class="weather-img">
+      <img src="images/weather.svg" alt="Weather condition icon" class="weather-img" loading="lazy">
     </section>
 
-    <section id="about">
-      <h2>About Madagascar Climate</h2>
-      <p>Madagascar features a tropical climate with distinct wet and dry seasons. The island's weather varies
-        significantly by region due to its diverse topography.</p>
+    <section class="about" id="about">
+      <h2>Madagascar Climate</h2>
+      <p>Madagascar features a tropical climate with distinct wet (November-April) and dry (May-October) seasons.
+        Coastal areas are hotter and more humid, while highland regions like Antananarivo enjoy milder temperatures.</p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; <span id="year"></span> Madagascar Weather | Last Updated: <span id="last-updated"></span></p>
+    <p>&copy; <span id="year"></span> Madagascar Weather Service | <span id="last-updated"></span></p>
   </footer>
 </body>
 
