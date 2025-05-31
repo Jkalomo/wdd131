@@ -8,16 +8,10 @@
   <meta name="author" content="Jabulani Kalomo">
   <title>Weather in Madagascar</title>
 
-  <!-- Google Fonts with preconnect and proper attributes -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" media="print"
-    onload="this.media='all'">
-
-  <!-- Fallback for non-JS browsers -->
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/place.css">
@@ -41,25 +35,25 @@
   <!-- Header -->
   <header class="hero">
     <picture>
-      <source srcset="images/herolarge.webp" media="(min-width: 1000px)" />
-      <source srcset="images/heromedium.webp" media="(min-width: 600px)" />
-      <img src="images/madagascar.jpg" alt="Beautiful landscape of Madagascar" />
+      <source srcset="images/herolarge.webp" media="(min-width: 1000px)">
+      <source srcset="images/heromedium.webp" media="(min-width: 600px)">
+      <img src="images/madagascar.jpg" alt="Beautiful landscape of Madagascar">
     </picture>
-    <h1>Weather in Madagascar 🌍</h1>
+    <h1>Weather in Madagascar <span aria-hidden="true">🌍</span></h1>
   </header>
 
   <!-- Main Content -->
   <main>
     <section class="weather" id="weather">
-      <h2>Current Weather <span class="weather-icon">🌍</span></h2>
+      <h2>Current Weather</h2>
       <div class="weather-data">
         <p>Temperature: <span id="temp">25</span>&deg;C</p>
         <p>Wind Speed: <span id="wind-speed">15</span> km/h</p>
         <p>Wind Chill: <span id="wind-chill">N/A</span></p>
       </div>
       <picture>
-        <source srcset="images/weather.svg" media="(max-width: 600px)" />
-        <img src="images/weather1.png" alt="Weather icon" class="weather-img" />
+        <source srcset="images/weather.svg" media="(max-width: 600px)">
+        <img src="images/weather.png" alt="Weather icon" class="weather-img">
       </picture>
     </section>
 
