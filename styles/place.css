@@ -24,7 +24,8 @@ body {
   --border-radius: 8px;
 }
 
-/* ===== LAYOUT ===== */
+/* ===== COMPONENTS ===== */
+/* Navigation */
 .navbar {
   background: var(--secondary-color);
   color: white;
@@ -37,27 +38,6 @@ body {
   z-index: 1000;
 }
 
-.hero {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: var(--secondary-color);
-  color: white;
-  margin-top: 2rem;
-}
-
-/* ===== COMPONENTS ===== */
-/* Navigation */
 .nav-links {
   list-style: none;
   display: flex;
@@ -97,9 +77,10 @@ footer {
 .hero h1 {
   margin: 1rem 0;
   color: var(--secondary-color);
+  text-align: center;
 }
 
-/* Weather Card */
+/* Weather Section */
 .weather {
   background: #e0f2f1;
   padding: 1.5rem;
@@ -110,6 +91,10 @@ footer {
 .weather h2 {
   color: var(--secondary-color);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .weather-data p {
@@ -123,11 +108,20 @@ footer {
 }
 
 /* About Section */
-#about {
+.about {
   background: white;
   padding: 1.5rem;
   border-radius: var(--border-radius);
   margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--secondary-color);
+  color: white;
+  margin-top: 2rem;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -150,9 +144,10 @@ footer {
   .hamburger {
     display: block;
   }
+}
 
-  .weather,
-  #about {
-    padding: 1rem;
+@media (max-width: 600px) {
+  .weather-emoji {
+    display: none;
   }
 }

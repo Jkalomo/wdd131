@@ -8,20 +8,16 @@
   <meta name="author" content="Jabulani Kalomo - WDD 230 Weather Project">
   <title>Madagascar Weather Forecast | Real-Time Climate Data</title>
 
-  <!-- Google Fonts (Validated) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/place.css">
-
-  <!-- JavaScript -->
   <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
-  <!-- Navigation -->
   <nav class="navbar">
     <div class="brand">Madagascar Weather</div>
     <button class="hamburger" aria-expanded="false" aria-label="Menu">&#9776;</button>
@@ -32,7 +28,6 @@
     </ul>
   </nav>
 
-  <!-- Header -->
   <header class="hero">
     <picture>
       <source srcset="images/herolarge.webp" media="(min-width: 1000px)">
@@ -42,16 +37,18 @@
     <h1>Madagascar Weather Conditions</h1>
   </header>
 
-  <!-- Main Content -->
   <main>
     <section class="weather" id="weather">
-      <h2>Current Weather</h2>
+      <h2>Current Weather <span class="weather-emoji" aria-hidden="true">⛅</span></h2>
       <div class="weather-data">
-        <p>Temperature: <span id="temp">25</span>&deg;C</p>
+        <p>Temperature: <span id="temp">8</span>&deg;C</p>
         <p>Wind Speed: <span id="wind-speed">15</span> km/h</p>
         <p>Wind Chill: <span id="wind-chill">N/A</span></p>
       </div>
-      <img src="images/weather.svg" alt="Weather condition icon" class="weather-img" loading="lazy">
+      <picture>
+        <source srcset="images/weather.svg" media="(max-width: 600px)">
+        <img src="images/weather.png" alt="Weather condition icon" class="weather-img" loading="lazy">
+      </picture>
     </section>
 
     <section class="about" id="about">
@@ -61,7 +58,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; <span id="year"></span> Madagascar Weather Service | <span id="last-updated"></span></p>
   </footer>
