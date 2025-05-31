@@ -1,26 +1,28 @@
-/* General Reset and Typography */
+/* Reset and Variables */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background-color: #f5f5f5;
-  padding: 0 1rem;
+:root {
+  --primary-color: #004080;
+  /* Improved contrast */
+  --secondary-color: #00695c;
+  --bg-color: #f5f5f5;
+  --font-family: 'Roboto', sans-serif;
+  --font-size: 16px;
+  --hero-max-height: 500px;
 }
 
-/* Global Variables */
-:root {
-  --primary-color: #007bff;
-  --font-size: 16px;
-  --font-family: 'Roboto', sans-serif;
-  --secondary-color: #00796b;
-  --bg-color: #f5f5f5;
-  --hero-max-height: 500px;
+/* Body and Typography */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  padding: 0 1rem;
+  line-height: 1.6;
 }
 
 /* Navigation */
@@ -82,7 +84,7 @@ body {
   }
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   text-align: center;
   margin-bottom: 1rem;
@@ -102,7 +104,7 @@ body {
   color: var(--secondary-color);
 }
 
-/* Weather Section */
+/* Weather */
 .weather {
   background: #e0f2f1;
   padding: 1rem;
@@ -111,7 +113,7 @@ body {
 }
 
 .weather h2 {
-  color: #00695c;
+  color: #004d40;
   margin-bottom: 1rem;
 }
 
@@ -121,8 +123,18 @@ body {
 
 .weather-img {
   width: 100px;
-  display: block;
+  display: none;
   margin: 1rem auto 0;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
 }
 
 /* About Section */
@@ -142,21 +154,11 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Additional Styling and ::after Usage */
-h1::after {
-  content: ' 🌍';
-  font-size: 1.2rem;
-  margin-left: 5px;
-}
-
-/* Apply Global Variables */
-body {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  color: var(--primary-color);
-}
-
-/* Footer Date and Last Modified Text */
-footer p {
-  margin: 0;
+/* Emoticon after h1 (only for wide view) */
+@media (min-width: 769px) {
+  h1::after {
+    content: ' 🌍';
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
 }
