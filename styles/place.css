@@ -17,12 +17,11 @@
 
 /* Body and Typography */
 body {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  background-color: var(--bg-color);
-  color: var(--primary-color);
-  padding: 0 1rem;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  color: #222;
+  background-color: #f5f5f5;
+  padding: 0 1rem;
 }
 
 /* Navigation */
