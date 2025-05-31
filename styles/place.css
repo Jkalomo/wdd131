@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+/* Font face fallback */
+@font-face {
+  font-family: 'Roboto-fallback';
+  src: local('Arial');
+  size-adjust: 105%;
+  ascent-override: 95%;
+  descent-override: 22%;
+  line-gap-override: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
