@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Review Submission Confirmation">
     <meta name="author" content="Jabulani Kalomo - WDD131 Review Form">
@@ -27,7 +27,7 @@
         </section>
 
         <section class="review-count">
-            <p>You have submitted <span id="reviewCounter">0</span> review(s).</p>
+            <p>You have submitted <span id="review-counter">0</span> review(s).</p>
         </section>
 
         <a class="button-link" href="form.html">Submit Another Review</a>
@@ -36,7 +36,7 @@
     <footer>
         <p>© 2025 🌸 Jabulani Kalomo 🌸<br>
             Zimbabwe<br>
-            Last Modification: <span id="lastModified"></span></p>
+            Last Modification: <span id="last-modified"></span></p>
     </footer>
 
     <script>
@@ -46,7 +46,7 @@
         if (!count) count = 0;
         count = parseInt(count) + 1;
         localStorage.setItem(counterKey, count);
-        document.getElementById("reviewCounter").textContent = count;
+        document.getElementById("review-counter").textContent = count;
 
         // Update to current date and time
         const now = new Date();
@@ -58,7 +58,7 @@
             minute: '2-digit',
             second: '2-digit'
         };
-        document.getElementById("lastModified").textContent = now.toLocaleString(undefined, options);
+        document.getElementById("last-modified").textContent = now.toLocaleString(undefined, options);
     </script>
 </body>
 
