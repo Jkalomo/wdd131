@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Product page for Santy Baby Boutique ">
+    <meta name="author" content="Jabulani Kalomo - Santy Baby Boutique - Product Page">
+    <title>Products - Baby Santy Boutique</title>
+
+    <link rel="stylesheet" href="styles/project.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Baby Santy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="safety.html">Safety</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-filters">
+            <h2>Filter by Category</h2>
+            <button class="filter-btn" data-category="All">All</button>
+            <button class="filter-btn" data-category="Clothing">Clothing</button>
+            <button class="filter-btn" data-category="Travel">Travel</button>
+        </section>
+
+        <section class="product-list" id="product-list"></section>
+    </main>
+
+    <footer>
+        <p>© 2025 Baby Santy Boutique. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/product.js"></script>
+</body>
+
+</html>

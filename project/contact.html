@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contact page for Santy Baby Boutique ">
+    <meta name="author" content="Jabulani Kalomo - Santy Baby Boutique - Contact Page">
+    <title>Contact - Baby Santy Boutique</title>
+
+    <link rel="stylesheet" href="styles/project.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Baby Santy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="safety.html">Safety</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="2" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Baby Santy Boutique. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/contact.js"></script>
+</body>
+
+</html>
